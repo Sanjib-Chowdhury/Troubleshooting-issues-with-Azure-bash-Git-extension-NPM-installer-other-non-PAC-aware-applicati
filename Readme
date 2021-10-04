@@ -1,5 +1,5 @@
-It's commonly observed that applications Azure bash, Git extension, NPM installer & similar non PAC aware applications fails to work behind corporate proxy. I observed this many times with Bluecoat ProxySG.
+It's commonly observed that applications like Azure bash, Git extension, NPM installer & similar non PAC aware applications fails to work behind corporate proxy. I observed this many times with Bluecoat ProxySG.
 
-It's mostly because these applications fail to authenticate to the proxy & proxy blocks the connections. However, the developers usually don't agree to the this as they include proxy details in configuration file of the application. Issue is Proxy don't understand the format/ scheme these details are passed & blocks the connection.
+It's mostly because unlike web browsers, these applications don't pass authentication credetials to the at all or pass those in wrong format which the proxy doesn't understand. Hence, these applications fail to authenticate to the proxy & proxy blocks the connections. However, the developers usually don't agree to the this as they include proxy details in configuration file of the application. Issue is Proxy don't understand the format/ scheme these details are passed & blocks the connection.
 
 This tool helps to check whether the proxy is blocking connection or the developer needs to adjust the parameters passed to the proxy.
